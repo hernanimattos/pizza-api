@@ -8,6 +8,7 @@ const logger = require('morgan');
 const routeSizes = require('./controllers/sizes');
 const routerDoughs = require('./controllers/doughs');
 const routerFillings = require('./controllers/fillings');
+const routerProducts = require('./controllers/products');
 
 const Port = 3000;
 
@@ -16,24 +17,24 @@ app.use(cors());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(
-  express.urlencoded({
-    extended: false,
-  }),
+	express.urlencoded({
+		extended: false,
+	}),
 );
 app.use(cookieParser());
 
 app.use('/api', routeSizes);
 app.use('/api', routerDoughs);
 app.use('/api', routerFillings);
+app.use('/api', routerProducts);
 
 // catch 404 and forward to error handler
-app.use(function(err, req, res, next) {
-  next(createError(404));
+app.use(function (err, req, res, next) {
+	next(createError(404));
 });
 
-
 app.listen(Port, () => {
-  console.log(`Servidor rodando na port ${Port}`);
+	console.log(`Servidor rodando na port ${Port}`);
 });
 
 module.exports = app;
