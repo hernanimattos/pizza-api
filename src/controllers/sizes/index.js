@@ -1,8 +1,5 @@
-const express = require('express');
-const router = express.Router();
-
 const getPizzaSizes = (req, res, next) => {
-  // console.log('quiiiiiii', res)
+
   res.send([{
       id: 1,
       name: 'Pequena',
@@ -19,6 +16,7 @@ const getPizzaSizes = (req, res, next) => {
 
   next();
 };
-router.get('/sizes', getPizzaSizes)
 
-module.exports = router
+module.exports = {
+  getPizzaSizes,
+};

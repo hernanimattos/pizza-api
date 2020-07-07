@@ -1,6 +1,3 @@
-const express = require('express');
-const routerDoughs = express.Router();
-
 const getPizzasDoughs = (req, res, next) => {
   res.send([{
       id: 1,
@@ -19,6 +16,6 @@ const getPizzasDoughs = (req, res, next) => {
   next();
 };
 
-routerDoughs.get('/doughs', getPizzasDoughs);
-
-module.exports = routerDoughs;
+module.exports = {
+  getPizzasDoughs,
+};

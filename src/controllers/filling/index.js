@@ -1,6 +1,3 @@
-const express = require('express');
-const routerFillings = express.Router();
-
 const getPizzasFillings = (req, res, next) => {
   res.json([{
     id: 1,
@@ -14,9 +11,9 @@ const getPizzasFillings = (req, res, next) => {
   }])
 
   next();
-
 }
 
-routerFillings.get('/fillings', getPizzasFillings);
 
-module.exports = routerFillings;
+module.exports = {
+  getPizzasFillings,
+};
