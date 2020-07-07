@@ -7,7 +7,7 @@ nodejs,
 expressjs
 ```
 
-Pizza app usee this api -> [pizza-api](https://github.com.br/hernanimattos/pizza-app)
+Pizza app use this app -> [pizza-api](https://github.com.br/hernanimattos/pizza-app)
 
 ## To Run
 
